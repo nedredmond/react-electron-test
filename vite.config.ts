@@ -8,7 +8,7 @@ export default defineConfig({
     lib: {
       entry: "src/main.tsx",
       name: "Khanmigo Learning Coach",
-      fileName: (format) => `khanmigo-learning-coach.${format}.js`,
+      fileName: `khanmigo-learning-coach`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],

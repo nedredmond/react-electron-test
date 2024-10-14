@@ -4,10 +4,18 @@
   "version": "0.0.0",
   "type": "module",
   "files": [
-    "dist"
+    "dist/*"
   ],
-  "main": "./dist/khanmigo-learning-coach.cjs",
+  "main": "./dist/khanmigo-learning-coach.umd.js",
   "module": "./dist/khanmigo-learning-coach.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/khanmigo-learning-coach.js",
+      "require": "./dist/khanmigo-learning-coach.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
