@@ -1,15 +1,15 @@
 import { useState } from "react";
-import khanmigo from "/khanmigo.svg";
+import khanmigo from "./assets/khanmigo.svg";
 import "./App.css";
 
 export const App = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <>
+    <div id="klc-root">
       <div>
         <a href="https://khanmigo.ai" target="_blank">
-          <img src={khanmigo} alt="Khanmigo" />
+          <img src={khanmigo} alt="Khanmigo" className="logo" />
         </a>
       </div>
       <h1>Learning Coach</h1>
@@ -18,6 +18,6 @@ export const App = () => {
           count is {count}
         </button>
       </div>
-    </>
+    </div>
   );
 };
